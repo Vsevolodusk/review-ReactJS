@@ -56,21 +56,18 @@ class App extends React.Component {
   constructor(props) {
    super(props);
    this.state = {
-     users: responseData,
-   };
+    users : responseData
+   }
   }
 
   
  render() {
-   const { users } = this.state;
-   const usersArray = users.map((userData) => (
-     <CreateReview key={userData.id} usersData={userData} />
-   ));
-
+  const {users} = this.state
+  const userArray = users.map((userData) => <CreateReview key = {userData.id} usersData = {userData} />) 
    return (
-     <div> 
-       {usersArray}
-     </div>
+     <>
+       {userArray}
+     </>
    );
  }
 }
